@@ -1,33 +1,71 @@
-# 🎉 EventMaster
+🎉 EventMaster
 
-EventMaster es una aplicación web para la gestión de eventos.  
-Permite crear, visualizar y administrar eventos almacenados en una base de datos MongoDB.
+Gestión de Eventos y Reservas
+Reto: Dev Senior Code – JavaScript MEAN Mastery
+Autor: Juan Pablo
 
-El proyecto está dividido en:
+📌 Descripción
 
-- 📂 Backend (API REST)
-- 🎨 Frontend (Interfaz de usuario)
+EventMaster es una aplicación web desarrollada para una agencia de eventos que necesita organizar sus actividades y controlar el cupo de asistentes.
 
----
+La plataforma permite:
 
-## 🚀 Características
+📋 Registrar eventos
 
-- Crear nuevos eventos
-- Listar eventos disponibles
-- Guardar eventos en MongoDB
-- Arquitectura separada (frontend + backend)
-- API REST para manejo de datos
+👥 Controlar el número máximo de asistentes
 
----
+➕ Inscribir personas a un evento
 
-## 🛠️ Tecnologías utilizadas
+🗑️ Eliminar eventos
 
-### Backend
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-- dotenv
+🔎 Filtrar eventos por tipo (Taller, Conferencia, Networking)
 
-### Frontend
-- HTML / CSS / JavaScript 
+🛠️ Stack Tecnológico
+🔹 Backend
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+dotenv
+
+🔹 Frontend
+
+JavaScript Vanilla
+
+HTML5
+
+CSS3 (Flexbox / Grid)
+
+🗂️ Arquitectura del Proyecto
+
+El backend está organizado siguiendo buenas prácticas:
+
+backend/
+│
+├── models/
+│   └── Evento.js
+│
+├── controllers/
+│   └── eventosController.js
+│
+├── routes/
+│   └── eventosRoutes.js
+│
+├── middleware/
+│   └── errorHandler.js
+│
+├── server.js
+└── .env
+
+Separación obligatoria:
+
+/models
+
+/routes
+
+/controllers
