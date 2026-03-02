@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventMaster</title>
+    <link rel="icon" href="data:image/x-icon;base64,">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+</head>
+<body>
+    <header>
+        <h1>EventMaster</h1>
+        <p>Agencia de Eventos</p>
+    </header>
+
+    <main>
+        <section class="header-controls">
+            <div class="filtros">
+                <span>Filtrar por tipo:</span>
+                <button class="btn-filter active" onclick="renderizar('todos')">Todos</button>
+                <button class="btn-filter" onclick="renderizar('Taller')">Talleres</button>
+                <button class="btn-filter" onclick="renderizar('Conferencia')">Conferencias</button>
+                <button class="btn-filter" onclick="renderizar('Networking')">Networking</button>
+            </div>
+            <div class="acciones">
+                <button class="btn-primary" onclick="abrirModalCrear()">➕ Crear Evento</button>
+                <button class="btn-secondary" onclick="cargarEventos()">🔄 Recargar</button>
+            </div>
+        </section>
+
+        <div id="eventos-container" class="grid-container">
+            <p class="cargando">Cargando eventos...</p>
+        </div>
+    </main>
+
+    <!-- Modal para crear evento -->
+    <div id="modal-crear" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Crear Nuevo Evento</h2>
+            <form id="form-evento" onsubmit="crearNuevoEvento(event)">
+                <input type="text" id="nombre" placeholder="Nombre del evento" required>
+                <input type="date" id="fecha" required>
+                <select id="tipo" required>
+                    <option value="">Seleccionar tipo</option>
+                    <option value="Taller">Taller</option>
+                    <option value="Conferencia">Conferencia</option>
+                    <option value="Networking">Networking</option>
+                </select>
+                <input type="number" id="cupomaximo" placeholder="Cupo máximo" required min="1">
+                <button type="submit" class="btn-primary">Crear Evento</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
